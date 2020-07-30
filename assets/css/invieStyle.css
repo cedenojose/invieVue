@@ -1,0 +1,350 @@
+/*insertar la tpografias montserrat y allerta*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Allerta';
+  src: url("../fonts/Allerta-Regular.ttf") format("truetype");
+}
+:root {
+  --color-primary: #1F313C;
+  --color-secundary: #ff4b4e;
+  --font-primary: 'Allerta', monospace;
+  --font-secundary: 'Montserrat', sans-serif;
+  --bg-invie: linear-gradient(45deg, #ff6b50, #fe344e);
+}
+body {
+  font-size: 16px;
+  font-family: var(--font-primary);
+}
+.invie {
+  background: var(--bg-invie);
+}
+.bg-encabezado {
+  background: url("../images/background.png") no-repeat center top;
+  background-size: cover;
+  color: #FFFFFF;
+  padding: 1rem;
+}
+/*----------------------------------------
+-----------------Portada------------------
+-----------------------------------------*/
+.portada {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.portada h1 {
+  font-size: 3.5rem;
+  font-family: var(--font-secundary);
+  margin-bottom: .1rem;
+}
+.portada h1 span {
+  color: #ff4b4e;
+  border-bottom: .3rem solid;
+}
+.portada h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+.portada .btn-danger {
+  color: #fff;
+  background: var(--bg-invie);
+  border-color: var(--color-secundary);
+  margin-top: 1rem;
+  transition: all .5s ease;
+  align-self: flex-start
+}
+.portada .btn-danger:hover, 
+.portada .btn-danger:active,
+.btn-danger:not(:disabled):not(.disabled):active {
+  background: var(--color-primary);
+}
+/*----------------------------------------
+-----------------Header-------------------
+-----------------------------------------*/
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.header .logo {
+  width: 150px;
+  height: auto;
+}
+.header .menu {
+  flex: 1 1 100%;
+}
+.titulos-encabezado {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/*----------------------------------------
+------------------Menu--------------------
+-----------------------------------------*/
+#menu,
+.menu {
+  transition: all .5s ease;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+.menu ul li a {
+  display: block;
+  padding: .6rem 0;
+  border-top: 1px solid #FFFFFF;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.active {
+  color: var(--color-secundary) !important;
+}
+.router-link-active,
+a.router-link-active,
+a.router-link-exact-active,
+.menu ul li a:hover,
+.menu ul li.active a {
+  color: var(--color-secundary);
+}
+.boton-menu {
+  border: 0;
+  padding: 0 .5rem;
+  font-size: 1.9rem;
+  margin: 0;
+  background: transparent;
+  color: var(--secundary-color);
+}
+
+.boton-menu:focus {
+  outline: 0;
+}
+/*----------------------------------------
+----------------Guitarras-----------------
+-----------------------------------------*/
+.guitarras {
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+.guitarras h2 {
+  /*35 px en la original*/
+  font-size: 2.1rem;
+  font-family: var(--font-secundary);
+  font-weight: 900;
+  margin: 2rem 0;
+}
+.guitarras article h3 {
+  /*50 px en la original*/
+  font-size: 3.1rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.guitarra {
+  padding: .6rem;
+  margin: .6rem;
+  /*overflow: hidden;*/
+  border: 1px solid var(--color-primary);
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+}
+.guitarra-left {
+  justify-content: flex-end;
+}
+.guitarra-info {
+  padding: 1rem;
+}
+.guitarra-info ol {
+  padding: 0;
+}
+.right {
+  /*order: 1;*/
+  /*margin-bottom: -0.6rem;*/
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.left {
+  position: absolute;
+  left: 0;
+  bottom: -3rem;
+}
+.left,
+.right {
+  width: 350px;
+  height: auto;
+}
+/*----------------------------------------
+-----------------Footer-------------------
+-----------------------------------------*/
+.footer {
+  margin-top: 2rem;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  padding: 3rem 0;
+}
+.footer .container {
+  display: flex;
+}
+.footer .container .row {
+  align-items: center;
+}
+.contacto a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.contacto strong {
+  display: block;
+  margin: 1.5rem 0 0 0;
+}
+.contacto .directo {
+  display: flex;
+  justify-content: space-between;
+}
+.formulario .form-row .asunto {
+  display: flex;
+  flex-direction: column;
+  }
+.formulario button[type="submit"] {
+  align-self: flex-end;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  background: var(--bg-invie);
+}
+
+/*----------------------------------------
+--------------Tabla Precios---------------
+-----------------------------------------*/
+.table thead {
+  background: var(--color-primary);
+  color: #FFFFFF;
+}
+.table tbody {
+  color: var(--color-primary);
+}
+.table-bordered th,
+.table-bordered td {
+  border-color: var(--color-primary);
+}
+.table-bordered thead th,
+.table-bordered thead td {
+  border-bottom-width: 0;
+}
+.tabla-columna-modelo {
+  min-width: 140px;
+}
+.tabla-columna-precio {
+  min-width: 120px;
+}
+.tabla-columna-modelo,
+.tabla-columna-precio {
+  text-align: center;
+}
+.tabla-columna-descripcion {
+  min-width: 400px;
+}
+/*----------------------------------------
+--------------Medias Querys---------------
+-----------------------------------------*/
+
+
+@media (max-width: 400px) {
+  .contacto .directo {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  .bg-encabezado {
+    padding: 2rem 3rem 1rem;
+  }
+  .contacto .directo {
+    display: block;
+  }
+  .header .menu {
+    display: block !important;
+    flex: 0 1 auto;
+    margin-left: auto;
+    font-size: 1.2rem;
+  }
+  .menu ul {
+    display: flex;
+    margin: 0;
+  }
+  .menu ul li a {
+    border-top: 0;
+    padding: 0;
+    margin: 0 0 0 1.4rem;
+    text-transform: capitalize;
+    border-bottom: 4px transparent;
+    transition: all .5s ease; 
+  }
+  .menu li a:before{
+    content: "∘";
+    font-size: 1.5rem;
+    margin-right: .3rem;
+  }
+  .active {
+    border-bottom: 3px solid !important;
+  }
+  .menu ul li.active a,
+  .menu ul li a:hover {
+    border-bottom: 3px solid;
+  }
+}
+
+@media (max-width: 767px) {
+  .right {
+    order: 1;
+    bottom: initial;
+    right: initial;
+    position: static;
+    margin: -4rem .3rem -.6rem auto; 
+  }
+  .left {
+    position: static;
+    order:1;
+    margin: auto;
+    margin-bottom: -3rem;
+    margin-top: -2rem;
+  }
+  .left,
+  .right {
+    width: 285px;
+    /*height: auto;*/
+  }
+  .guitarra {
+    position: static;
+    flex-wrap: wrap;
+
+  }
+  .guitarra-left {
+    justify-content: start;
+  }
+  .contacto {
+    margin: 1rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container.guitarras {
+    max-width: 720px;
+  }
+  
+}
+
+@media (min-width: 992px) {
+  .contacto .directo {
+    display: flex;
+  }
+}
+a.router-link-exact-active {
+  color: black;
+}
